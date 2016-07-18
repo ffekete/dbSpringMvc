@@ -1,4 +1,9 @@
 d:\Sajat\dbWorkspace\HelloSpring\src\main\java\backend\dao\ClientRepository.java
+d:\Sajat\dbWorkspace\HelloSpring\src\main\java\com\epam\ui\view\ClientDto.java
+d:\Sajat\dbWorkspace\HelloSpring\src\main\java\com\epam\ui\view\ListClientsModel.java
 d:\Sajat\dbWorkspace\HelloSpring\src\main\java\backend\service\BankService.java
+d:\Sajat\dbWorkspace\HelloSpring\src\main\java\com\epam\ui\controller\ListClientController.java
+d:\Sajat\dbWorkspace\HelloSpring\src\main\java\com\epam\ui\view\UrlConstants.java
 d:\Sajat\dbWorkspace\HelloSpring\src\main\java\backend\domain\Client.java
 d:\Sajat\dbWorkspace\HelloSpring\src\main\java\com\epam\ui\IndexController.java
+d:\Sajat\dbWorkspace\HelloSpring\src\main\java\com\epam\ui\transformer\ClientsToListClientsModelTransformer.java

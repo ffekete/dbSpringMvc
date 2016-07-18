@@ -10,7 +10,7 @@ public class IndexController {
 
 	@ModelAttribute("message")
 	public String message(){
-		String msg = new String("Dat ass!");
+		String msg = new String("Dat ash!");
 		return msg;
 	}
 	
