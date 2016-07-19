@@ -18,4 +18,8 @@ public class BankService {
 	public Iterable<Client> listClients(){
 		return clientRepository.findAll();
 	}
+	
+	public void SaveClient(Client client){
+		clientRepository.save(client);
+	}
 }
