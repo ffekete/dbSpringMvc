@@ -10,6 +10,10 @@
 
 	<context:component-scan base-package="com.epam.ui" />
 
+	<mvc:default-servlet-handler />
+	<mvc:resources location="/assets/**" mapping="/assets/" />
+
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
@@ -31,6 +35,23 @@
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basename" value="locale" />
 	</bean>
+
+	<bean id="themeSource"
+		class="org.springframework.ui.context.support.ResourceBundleThemeSource">
+		<property name="basenamePrefix" value="theme-" />
+	</bean>
+
+	<bean id="themeResolver"
+		class="org.springframework.web.servlet.theme.SessionThemeResolver">
+		<property name="defaultThemeName" value="light" />
+	</bean>
+
+	<mvc:interceptors>
+		<bean id="themeChangeInterceptor"
+			class="org.springframework.web.servlet.theme.ThemeChangeInterceptor">
+			<property name="paramName" value="theme" />
+		</bean>
+	</mvc:interceptors>
 
 
 
