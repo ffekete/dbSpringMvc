@@ -1,7 +1,9 @@
 package backend.service;
 
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
 
 import backend.dao.ClientRepository;
 import backend.domain.Client;
