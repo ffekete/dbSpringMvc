@@ -32,15 +32,20 @@ public class NewClientPostController {
 	
 	@ModelAttribute
 	public void newClient(@Valid NewClientsRequestModel newClientRequestModel, BindingResult errors){
+		
 		if(errors.hasErrors()){
 			return;
 		}
+		
 		Client newClient = transformer.transform(newClientRequestModel);
 		bankService.SaveClient(newClient);
 	}
 	
 	@RequestMapping(value=UrlConstants.NEW_CLIENT_POST, method=RequestMethod.POST)
-	public String newCLient(){
+	public String newCLient(@Valid NewClientsRequestModel newClientRequestModel, BindingResult errors){
+		if(errors.hasErrors()){
+			return "newClient";
+		}
 		return "redirect:" + UrlConstants.LIST_CLIENTS;
 	}
 	
