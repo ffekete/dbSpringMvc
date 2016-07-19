@@ -10,6 +10,7 @@
 <form:form commandName="newClientsRequestModel" type="form" action="newClientPost.html">
 	<spring:message code="client_info"/>
 	
-	<form:input type="text" path="name"></form:input>   <form:errors path="*"></form:errors><br>
+	<form:input type="text" path="name"></form:input>
+	<form:errors path="*"></form:errors><br>
 </form:form>
 </body>
