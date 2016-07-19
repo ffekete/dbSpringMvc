@@ -1,6 +1,10 @@
 package com.epam.ui;
 
 public class NewClientsRequestModel {
+	public NewClientsRequestModel() {
+		super();
+	}
+
 	private String name;
 
 	public NewClientsRequestModel(String name) {
