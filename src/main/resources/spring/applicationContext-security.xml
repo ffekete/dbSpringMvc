@@ -6,7 +6,11 @@
 	    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 	<http auto-config="true">
 		<anonymous enabled="false" />
+		<intercept-url pattern="/downloadFile.html" access="ROLE_ADMIN" />
+		<intercept-url pattern="/listClients.html" access="ROLE_ADMIN" />
 		<intercept-url pattern="/newClient.html" access="ROLE_ADMIN" />
+		<intercept-url pattern="/showUser.html" access="ROLE_ADMIN" />
+		<intercept-url pattern="/uploadForm.html" access="ROLE_ADMIN" />
 		<form-login login-page="/loginPage.html" default-target-url="/newClient.html"
 			authentication-failure-url="/loginPage.html?login_error=1" />
 		<logout logout-success-url="/" />
