@@ -36,7 +36,7 @@ public class FileUploadController {
 			//byte[] bytes = file.getBytes();
 			String uploadPath = context.getRealPath("") + File.separator + PathConstants.UPLOAD_FILE_PATH;
 			
-			Files.copy(file.getInputStream(), new File(uploadPath + "1.pdf").toPath());
+			Files.copy(file.getInputStream(), new File(uploadPath + "abc.pdf").toPath());
 			
 			return "redirect:" + UrlConstants.FILE_UPLOAD;
 		}

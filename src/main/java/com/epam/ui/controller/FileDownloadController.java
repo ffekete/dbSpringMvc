@@ -27,9 +27,9 @@ public class FileDownloadController {
 
 	@RequestMapping(value = UrlConstants.FILE_DOWNLOAD, method = RequestMethod.GET)
 	@ResponseBody
-	public AbstractResource getDownloadForm(@PathVariable String name) throws IOException {
+	public AbstractResource getDownloadForm(@PathVariable String symbolicName, @PathVariable String extension) throws IOException {
 		String downloadPath = context.getRealPath("") + File.separator + PathConstants.DOWNLOAD_FILE_PATH;
 		
-		return new ByteArrayResource(Files.readAllBytes(Paths.get(downloadPath + name + ".txt")));
+		return new ByteArrayResource(Files.readAllBytes(Paths.get(downloadPath + symbolicName + extension)));
 	}
 }
