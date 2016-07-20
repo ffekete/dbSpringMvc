@@ -7,7 +7,7 @@
 	<http auto-config="true">
 		<anonymous enabled="false" />
 		<intercept-url pattern="/newClient.html" access="ROLE_ADMIN" />
-		<form-login login-page="/loginPage.html" default-target-url="/"
+		<form-login login-page="/loginPage.html" default-target-url="/newClient.html"
 			authentication-failure-url="/loginPage.html?login_error=1" />
 		<logout logout-success-url="/" />
 	</http>
