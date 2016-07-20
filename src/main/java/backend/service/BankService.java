@@ -24,4 +24,8 @@ public class BankService {
 	public void SaveClient(Client client){
 		clientRepository.save(client);
 	}
+	
+	public Client getClientById(Long id){
+		return clientRepository.findOne(id);
+	}
 }
