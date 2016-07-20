@@ -50,6 +50,15 @@
 		class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
 	</bean>
 
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.NullPointerException"> userNotFound </prop>
+			</props>
+		</property>
+	</bean>
+
+
 	<mvc:interceptors>
 		<bean id="themeChangeInterceptor"
 			class="org.springframework.web.servlet.theme.ThemeChangeInterceptor">
