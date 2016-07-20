@@ -27,6 +27,9 @@ public class ShowClient {
 	@ModelAttribute
 	public ShowClientModel getShowClientModel(ShowClientRequestModel showClientRequestModel){
 		Client client = bankService.getClientById(showClientRequestModel.getId());
+		if(client == null){
+			throw new NullPointerException("User not found with id " + showClientRequestModel.getId());
+		}
 		return new ClientToShowClientModelTransformer().transform(client);
 	}
 }
