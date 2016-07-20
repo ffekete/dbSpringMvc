@@ -22,7 +22,7 @@
 			<c:forEach var="client" items="${listClientsModel.clients}">
 				<tr>
 					<td>${client.id}</td>
-					<td>${client.name }</td>
+					<td>${client.name}</td>
 					<td><a href="<c:url value='${client.viewUrl}' /> ">Show</a></td>
 					</tr>
 			</c:forEach>
