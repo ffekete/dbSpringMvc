@@ -1,0 +1,7 @@
+usage: mvn jetty:run
+
+Usage:
+download: http://localhost:8080/downloadForm/file.txt
+upload: http://localhost:8080/uploadForm.html
+new client to database: http://localhost:8080/newClient.html
+list all clients: http://localhost:8080/listClients.html
